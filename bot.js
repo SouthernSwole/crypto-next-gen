@@ -255,3 +255,13 @@ main().catch(err => {
   console.error('Fatal startup error:', err);
 });
 
+function validateConfig(config) {
+  if (isNaN(config.LOOP_MS) || config.LOOP_MS <= 0) {
+    throw new Error("Invalid value for LOOP_MS. Must be a positive number.");
+  }
+  if (!config.PAIR) {
+    throw new Error("PAIR is not configured in environment variables.");
+  }
+  // Add similar validations for other parameters...
+}
+validateConfig(CONFIG);
