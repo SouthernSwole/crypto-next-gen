@@ -305,4 +305,9 @@ main().catch(err => {
   }npm install
 npm start
   
-}
+}npm install
+npm start
+git add .
+git commit -m "Launch full AI paper trading bot"
+git push origin main
+
